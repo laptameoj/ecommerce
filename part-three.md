@@ -40,7 +40,7 @@ Create the Order model with your schema and export it.
 
 Refs on an object schema are made by specifying the type as `Schema.Types.ObjectId`, AND adding a `ref: [modelName]` key on that same schema.
 
-IE - If I have a Pet with a reference to an Owner it would look like this:
+I.E. - If I have a Pet with a reference to an Owner it would look like this:
 
 ```
 var petSchema = new mongoose.Schema({
@@ -52,7 +52,7 @@ var petSchema = new mongoose.Schema({
 
 Embedded Schema is made by specifying the type as a pre-made Schema object.   
 
-IE - If I have an owner with multiple pets:
+I.E. - If I have an owner with multiple pets:
 
 * Make a pet schema
 * Make an owner schema
@@ -302,7 +302,7 @@ User
   .then(function(results){
     //Yay it worked, return it
   }, function(err){
-    //Uh oh, problemo.  Return a 500 status and the error.
+    //Uh oh, problem.  Return a 500 status and the error.
   })
 
 })
@@ -375,11 +375,11 @@ create: function(req, res) {
 
 ####
 
-With the order GET endpoint, simply accept a reqeust query of whatever orders you're searching for.  For example, if you were looking for all orders placed on a certain day, the URL might look like this: `/api/order?date=07/09/16`.  If you were looking for a specific user's orders, it might look like so: `/api/order?user=o09f6d8fnn7df7n9joj`.  Look at Mongoose's [query](http://mongoosejs.com/docs/queries.html) documentation if you need some examples.
+With the order GET endpoint, simply accept a request query of whatever orders you're searching for.  For example, if you were looking for all orders placed on a certain day, the URL might look like this: `/api/order?date=07/09/16`.  If you were looking for a specific user's orders, it might look like so: `/api/order?user=o09f6d8fnn7df7n9joj`.  Look at Mongoose's [query](http://mongoosejs.com/docs/queries.html) documentation if you need some examples.
 
 **TestPoint**: You should be able to test your order GET endpoint via Postman or your app.  Try a few different queries.  The most important one is the user query.
 
-If you've passed this last breakpoint, then  you've finished the backend of your application. Well done.
+If you've passed this last breakpoint, then you've finished the backend of your application. Well done.
 
 ####
 
